@@ -1,0 +1,29 @@
+exp=require("express")
+app=exp()
+app.listen(1000)
+bp=require("body-parser")
+app.use(bp.json())
+mj=require("mongojs")
+con=mj("mongodb://localhost:27017/bat730pm")
+token=require("jsonwebtoken")
+cr=require("cors")
+app.use(cr())
+app.post("/login",(req,res)=>{
+con.tbl_user.find(req.body,(err,result)=>{
+if(result.length==1)
+{
+console.log("Valid")
+payload={
+    uname:result[0].uname,
+    role:result[0].role
+}
+tk=token.sign(payload,"$%#$%",{expiresIn:'12h'})
+res.send({result:tk})
+}
+else
+{
+    res.send({result:'Invalid'})
+}
+
+})
+})

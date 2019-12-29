@@ -1,0 +1,5 @@
+<li *ngFor="let x of ser.obj">
+  <a [routerLink]="['pi',{proid:x.id}]">{{x.pname}}</a>
+</li>
+<br>
+<router-outlet></router-outlet>

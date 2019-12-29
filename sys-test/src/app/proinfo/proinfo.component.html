@@ -1,0 +1,13 @@
+<div *ngFor="let y of ser.obj">
+    <ng-container *ngIf="y.id==data">
+        
+        <h2>{{y.pname}}</h2>
+        
+        <img src="../../assets/{{y.image}}" width="300px">
+        <br>
+        <h2>{{y.pdesc}}</h2>
+        <br>
+        <h2>{{y.pcategory}}</h2>
+        <br>
+    </ng-container>
+</div>

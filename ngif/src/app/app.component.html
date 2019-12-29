@@ -1,0 +1,21 @@
+
+<input type="number" [(ngModel)]="x"><br>
+<input type="number" [(ngModel)]="y"><br>
+
+
+<h1 *ngIf="x>y;else abc">
+  x is big
+</h1>
+<ng-template #abc>
+<h1>
+     y is big
+  </h1>
+</ng-template>
+
+
+<li *ngFor="let x of arr; let i=index">{{i}}-{{x}}</li>
+
+
+<select >
+  <option *ngFor="let x of arr1; let i=index">{{i}}-{{x}}</option>
+</select>

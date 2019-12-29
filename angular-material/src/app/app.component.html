@@ -1,0 +1,22 @@
+
+
+<mat-drawer-container style="height: 800px;">  
+    <mat-drawer  #drw  style="width: 200px; background-color: blue; color: white;">
+      my world<br>
+      <button mat-button style="color: white; background-color: yellow;">click</button>
+      <a routerLink="hm"style="color: white;">home</a>
+      
+    </mat-drawer>
+  <mat-drawer-content>
+
+  <input type="button" value="click" (click) ="drw.toggle()">
+
+  <button mat-button color="red">click</button>
+
+  
+  </mat-drawer-content>
+   
+   
+</mat-drawer-container>
+
+  

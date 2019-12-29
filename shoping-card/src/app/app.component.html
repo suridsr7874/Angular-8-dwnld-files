@@ -1,0 +1,48 @@
+<mat-drawer-container style="height: 800px;">
+  <mat-drawer #drw style="width: 250px; background-color: palegreen;  color: orangered; font-size: 30px;">
+    <a routerLink="Ad">Admin</a>&nbsp;
+    <a routerLink="Us">User</a>&nbsp;
+    <router-outlet>
+  
+</router-outlet> 
+</mat-drawer>
+  <mat-drawer-content>
+    
+      <input type="button" value="click1" (click) ="drw.toggle()">
+    
+  </mat-drawer-content>
+
+</mat-drawer-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <a routerLink="Ad">Admin</a>&nbsp;
+<a routerLink="Us">User</a>&nbsp;
+<br>
+<router-outlet>
+  
+</router-outlet> -->
+

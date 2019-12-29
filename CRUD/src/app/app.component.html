@@ -1,0 +1,46 @@
+<div class="container">
+  <br>
+  <input type="text" placeholder="Enter name" class="form-control" [(ngModel)]="t1">
+  <br>
+  <input type="text" placeholder="Enter city" class="form-control" [(ngModel)]="t2">
+  <br>
+  <input type="button" value="Insert" class="btn btn-primary" (click)="funinsert()">
+<br><br>
+<input type="text" class="form-control" 
+placeholder="Search..." [(ngModel)]="txtsearch">
+<br>
+<div *ngIf="data.length!=0">
+  {{tmp}}
+<table class="table table-striped">
+  <th>Id</th>
+  <th (click)="funord('uname')">Username</th>
+  <th (click)="funord('city')">City</th>
+  <tr *ngFor="let row of data | orderBy:colname:ord | filter:txtsearch | paginate:{itemsPerPage:3,currentPage:pno}">
+    <td>{{row._id}}</td>
+    <ng-container *ngIf="tmp!=row._id;else abc">
+        <td>
+          {{row.uname}}
+        </td>
+        <td>
+          {{row.city}}
+        </td>
+        <td>
+          <input type="button" value="Delete" (click)="fundel(row._id)" class="btn btn-danger">
+        &nbsp;&nbsp; <input type="button" value="Edit" (click)="funedit(row)" class="btn btn-success">
+        </td>
+  </ng-container>
+  </tr>
+  
+</table>
+<ng-template #abc>
+  <td><input type="text" class="form-control" style="width:200px" [(ngModel)]="tt1"></td>
+  <td><input type="text" class="form-control" style="width:200px" [(ngModel)]="tt2"></td>
+  <td><input type="button" value="Save"  class="btn btn-success" (click)="funsave()">
+    &nbsp;
+    <input type="button" value="Cancel"  class="btn btn-primary" (click)="tmp=0">
+  </td>
+</ng-template>
+<pagination-controls (pageChange)="pno=$event"></pagination-controls>
+
+</div>
+</div>

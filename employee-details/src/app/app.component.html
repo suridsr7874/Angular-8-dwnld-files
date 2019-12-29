@@ -1,0 +1,22 @@
+<table border="1">
+  <thead style="color: blue; font-size: 20px;">
+    <tr>
+    <th>sno</th>
+    <th>name</th>
+    <th>gender</th>
+    <th>salary</th>
+    <th>dob</th>
+  </tr>
+  </thead>
+  <button class="btn btn-primary">suri</button>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{employee.sno | uppercase}}</td> 
+      <td>{{employee.name}}</td>
+      <td>{{employee.gender}}</td>
+      <td>{{employee.salary | currency:'usd':true:'1.3-3'}}</td>
+      <td>{{employee.dob | date:'dd/mm/y' }}</td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-primary">suri</button>

@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+th, td, tr{
+    text-align: center;
+    padding: 0 0 10px;
+    font-size: 20px;
+    transition: all 0.4s;
+}
+
+tr:hover{
+    background: cornflowerblue;
+    color: white;
+    transform: scale(1.1,1.1);
+}

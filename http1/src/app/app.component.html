@@ -1,0 +1,26 @@
+<input type="button" value="click here" (click)= "fun()">
+<table width="100%" border="1">
+  <thead>
+    <tr>
+      <th>name</th>
+     
+      <th>population</th>
+      <th>flag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of data">
+      <td>{{a.name}}</td>
+     
+      <td>{{a.population}}</td>
+      <td>
+        <img src="{{a.flag}}" width="100px"></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+

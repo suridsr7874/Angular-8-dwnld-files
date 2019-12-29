@@ -1,0 +1,11 @@
+<div *ngFor="let data of ser.obj" >
+  <ng-container *ngIf="data.id==var_pid">
+  <h2>{{data.pname}}</h2>
+  <img src="../../assets/{{data.image}}" width="200px" height="200px">
+  <h3>Price:{{data.price}}</h3>
+  <br>
+  {{data.descp}}
+  <br>
+  {{data.category}}
+</ng-container>
+</div>

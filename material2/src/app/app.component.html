@@ -1,0 +1,25 @@
+
+<mat-drawer-container style="height:800px">
+ <mat-drawer #drw style="width:150px;background-color:orangered" >
+   Welcome
+ </mat-drawer>
+ <mat-drawer-content>
+   <input type="button"  value="Show Drawer" (click)="drw.toggle()">
+  <mat-slide-toggle [(ngModel)]="t1">
+  </mat-slide-toggle>
+
+  
+  <mat-radio-button></mat-radio-button>Angular
+  <button mat-button color="primary">Click</button>
+  <button mat-raised-button color="primary">Click</button>
+  <button mat-raised-button color="accent">Click</button>
+  &nbsp;
+  <button mat-raised-button color="warn">Click</button>
+  <button mat-stroked-button color="warn">Click</button>
+  &nbsp;  <button mat-flat-button color="accent">Click</button>
+  <button mat-fab color="primary">Click</button>
+  <button mat-mini-fab color="primary">+</button>
+
+
+ </mat-drawer-content>
+</mat-drawer-container>

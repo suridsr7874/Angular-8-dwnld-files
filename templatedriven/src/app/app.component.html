@@ -1,0 +1,11 @@
+<form>
+  <input type="text" name="t1" 
+  [(ngModel)]="txt1" #cnt1="ngModel" required>
+  <br>
+  Valid-{{cnt1.valid}}<br>
+  InValid-{{cnt1.invalid}}<br>
+  Touched-{{cnt1.touched}}<br>
+  untouched-{{cnt1.untouched}}<br>
+  Modified-{{cnt1.dirty}}<br>
+  Not Modified - {{cnt1.pristine}}
+  </form>

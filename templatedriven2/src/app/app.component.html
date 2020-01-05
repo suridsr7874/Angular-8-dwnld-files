@@ -1,0 +1,13 @@
+<form>
+  <input type="text" [(ngModel)]="txt1" 
+  required name="t1" #c1="ngModel">
+  <span *ngIf="c1.invalid && c1.touched">Enter Username</span>
+<br>
+<input type="text" name="t2" [(ngModel)]="txt2" 
+required minlength="5" #c2="ngModel">
+<span *ngIf="c2.errors && c2.errors.required && c2.touched">Enter Lastname</span>
+<span *ngIf="c2.errors && c2.errors.minlength">Min length >5 </span>
+<br>
+<input type="button" value="Submit" 
+[disabled]="c1.invalid  || c2.invalid">
+</form>
